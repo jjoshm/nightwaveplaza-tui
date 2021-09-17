@@ -888,7 +888,7 @@ dependencies = [
 
 [[package]]
 name = "nightwaveplaza-tui"
-version = "0.2.8"
+version = "0.2.9"
 dependencies = [
  "chrono",
  "crossterm",
