@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.2.17](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.2.16...v0.2.17) (2021-09-17)
+
+
+### Bug Fixes
+
+* aur package description ([c22d26c](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/c22d26c5d11d551e0fb24463883728d66a927b60))
+* update readme ([efbd71a](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/efbd71a0c196b82bbb69e099459702f66252d025))
+
 ### [0.2.16](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.2.15...v0.2.16) (2021-09-17)
 
 
