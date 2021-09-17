@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.8](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.2.7...v0.2.8) (2021-09-17)
+
+
+### Bug Fixes
+
+* workflow ([3449a81](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/3449a81be10a57b256f15888d62e6763964f0c3a))
+
 ### [0.2.7](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.2.6...v0.2.7) (2021-09-17)
 
 
