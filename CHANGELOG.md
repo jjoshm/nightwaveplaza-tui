@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.3](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.1.2...v0.1.3) (2021-09-17)
+
+
+### Bug Fixes
+
+* remove windows and apple builds ([a434ca0](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/a434ca0a824c08eeac97aaa1d603b26df7032763))
+
 ### [0.1.2](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.1.1...v0.1.2) (2021-09-17)
 
 
