@@ -41,7 +41,7 @@ for BINARY in $BINARIES; do
     OUTPUT=$(./build.sh "${CMD_PATH}" "${OUTPUT_DIR}")
   else
     rustup target add x86_64-unknown-linux-musl
-    cargo build --release --target x86_64-unknown-linux-musl --bin "$BINARY"
+    OPENSSL_LIB_DIR=/usr/lib OPENSSL_INCLUDE_DIR=/usr/include/openssl cargo build --release --target x86_64-unknown-linux-musl --bin "$BINARY"
     OUTPUT=$(find "target/x86_64-unknown-linux-musl/release/" -maxdepth 1 -type f -executable \( -name "${BINARY}" -o -name "${BINARY}.*" \) -print0 | xargs -0)
   fi
 
