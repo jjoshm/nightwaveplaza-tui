@@ -7,7 +7,7 @@ import sys
 try:
   tag = os.environ.get("tag_name")
   raw_version = tag.replace('v', '')
-  sha265sum_url = f"https://github.com/joshmuente/nightwaveplaza-tui/releases/download/{tag}/nightwaveplaza-tui_{tag}_x86_64-unknown-linux-musl.tar.xz.sha256sum"
+  sha265sum_url = f"https://github.com/joshmuente/nightwaveplaza-tui/releases/download/{tag}/nightwaveplaza-tui_{tag}_x86_64-unknown-linux-gnu.xz.sha256sum"
   sha265sum = requests.get(sha265sum_url).content.decode("utf-8")
 
   template = """#Maintainer: Josh Münte
@@ -24,7 +24,7 @@ license=('MIT')
 depends=()
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
-source=("${_url_source}/releases/download/v${pkgver}/${_pkgname}_v${pkgver}_${arch}-unknown-linux-musl.tar.xz")
+source=("${_url_source}/releases/download/v${pkgver}/${_pkgname}_v${pkgver}_${arch}-unknown-linux-gnu.xz")
 sha256sums=('"""+ sha265sum +"""')
 
 package () {
