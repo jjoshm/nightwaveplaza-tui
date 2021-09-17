@@ -16,7 +16,7 @@ crash() {
 }
 
 trap 'crash' ERR
-PROJECT_ROOT="/rust/build/${GITHUB_REPOSITORY}"
+PROJECT_ROOT="rust/build/${GITHUB_REPOSITORY}"
 OUTPUT_DIR="$1"
 
 mkdir -p "$PROJECT_ROOT"
@@ -44,8 +44,8 @@ exit 1
 
 "wasm32-wasi") ;;
 "wasm32-unknown-emscripten") 
-mkdir -p /.cargo
-cat > /.cargo/config.toml << EOF
+mkdir -p .cargo
+cat > .cargo/config.toml << EOF
 [target.wasm32-unknown-emscripten]
 linker = "/usr/lib/emscripten-fastcomp/bin/clang"
 ar = "/usr/lib/emscripten-fastcomp/bin/llvm-ar"
@@ -53,8 +53,8 @@ EOF
 ;;
 
 "x86_64-apple-darwin")
-mkdir -p /.cargo
-cat > /.cargo/config.toml << EOF
+mkdir -p .cargo
+cat > .cargo/config.toml << EOF
 [target.x86_64-apple-darwin]
 linker = "/opt/osxcross/target/bin/x86_64-apple-darwin14-clang"
 ar = "/opt/osxcross/target/bin/x86_64-apple-darwin14-ar"
@@ -77,7 +77,7 @@ for BINARY in $BINARIES; do
     OUTPUT=$(./build.sh "${CMD_PATH}" "${OUTPUT_DIR}")
   else
     rustup target add "$RUSTTARGET"
-    OPENSSL_LIB_DIR=/usr/lib OPENSSL_INCLUDE_DIR=/usr/include/openssl CARGO_TARGET_DIR="./target" cargo build --release --target "$RUSTTARGET" --bin "$BINARY"
+    cargo build --release --target "$RUSTTARGET" --bin "$BINARY"
     OUTPUT=$(find "target/${RUSTTARGET}/release/" -maxdepth 1 -type f -executable \( -name "${BINARY}" -o -name "${BINARY}.*" \) -print0 | xargs -0)
   fi
 
