@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.1.0...v0.1.1) (2021-09-17)
+
+
+### Bug Fixes
+
+* cant parse Cargo.toml ([c001025](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/c0010254f866e3e454629c5efdcde4a84b486171))
+
 ## 0.1.0 (2021-09-17)
 
 
