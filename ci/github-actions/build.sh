@@ -40,9 +40,9 @@ for BINARY in $BINARIES; do
   if [ -x "./build.sh" ]; then
     OUTPUT=$(./build.sh "${CMD_PATH}" "${OUTPUT_DIR}")
   else
-    rustup target add x86_64-unknown-linux-gnu
-    cargo build --release --target x86_64-unknown-linux-gnu --bin "$BINARY"
-    OUTPUT=$(find "target/x86_64-unknown-linux-gnu/release/" -maxdepth 1 -type f -executable \( -name "${BINARY}" -o -name "${BINARY}.*" \) -print0 | xargs -0)
+    rustup target add x86_64-unknown-linux-musl
+    cargo build --release --target x86_64-unknown-linux-musl --bin "$BINARY"
+    OUTPUT=$(find "target/x86_64-unknown-linux-musl/release/" -maxdepth 1 -type f -executable \( -name "${BINARY}" -o -name "${BINARY}.*" \) -print0 | xargs -0)
   fi
 
   info "$OUTPUT"
