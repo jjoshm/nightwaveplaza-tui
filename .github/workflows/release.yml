@@ -13,7 +13,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
-        run: chmod +x /ci/entrypoint.sh /ci/build.sh && ./ci/entrypoint.sh
+        run: chmod +x ci/entrypoint.sh ci/build.sh && ./ci/entrypoint.sh
 
   release-aur:
     needs: release
