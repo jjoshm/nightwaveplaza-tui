@@ -29,7 +29,7 @@ fi
 UPLOAD_URL=${UPLOAD_URL/\{?name,label\}/}
 RELEASE_NAME=$(echo "$EVENT_DATA" | jq -r .release.tag_name)
 PROJECT_NAME=$(basename "$GITHUB_REPOSITORY")
-NAME="${NAME:-${PROJECT_NAME}_${RELEASE_NAME}}"
+NAME="${NAME:-${PROJECT_NAME}_${RELEASE_NAME}}_x86_64-unknown-linux-gnu"
 ARCHIVE_TYPES="${ARCHIVE_TYPES:-"tar.xz"}"
 EXTRA_FILES="${EXTRA_FILES:-""}"
 
