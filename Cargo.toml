@@ -1,6 +1,6 @@
 [package]
 name = "nightwaveplaza-tui"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["joshmuente"]
 edition = "2018"
 
