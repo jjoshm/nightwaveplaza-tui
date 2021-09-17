@@ -2,7 +2,7 @@
 
 # dependencies
 
-sudo apt install -y libgstreamer-plugins-base1.0-dev musl-tools
+sudo apt install -y libgstreamer-plugins-base1.0-dev musl-tools pkg-config libssl-dev
 
 set -eu
 
