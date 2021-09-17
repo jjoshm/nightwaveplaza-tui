@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.1.1...v0.1.2) (2021-09-17)
+
+
+### Bug Fixes
+
+* rebuildCargo.lock ([f55cf42](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/f55cf422aa1fb66fc16331a735c866db10f6301b))
+* typo Cargo.lock ([a8ed757](https://www.github.com/joshmuente/nightwaveplaza-tui/commit/a8ed7573fb2d0691af828bea1adb64034de8bc4c))
+
 ### [0.1.1](https://www.github.com/joshmuente/nightwaveplaza-tui/compare/v0.1.0...v0.1.1) (2021-09-17)
 
 
