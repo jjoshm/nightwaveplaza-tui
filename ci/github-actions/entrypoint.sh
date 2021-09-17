@@ -14,7 +14,7 @@ OUTPUT_DIR="output"
 mkdir -p "$OUTPUT_DIR"
 
 
-if ! FILE_LIST=$(ci/build.sh "$OUTPUT_DIR"); then
+if ! FILE_LIST=$(ci/github-actions/build.sh "$OUTPUT_DIR"); then
   echo "::error file=entrypoint.sh::Build failed" >&2
   exit 1
 fi
@@ -30,7 +30,7 @@ UPLOAD_URL=${UPLOAD_URL/\{?name,label\}/}
 RELEASE_NAME=$(echo "$EVENT_DATA" | jq -r .release.tag_name)
 PROJECT_NAME=$(basename "$GITHUB_REPOSITORY")
 NAME="${NAME:-${PROJECT_NAME}_${RELEASE_NAME}}_${RUSTTARGET}"
-ARCHIVE_TYPES="${ARCHIVE_TYPES:-"zip"}"
+ARCHIVE_TYPES="${ARCHIVE_TYPES:-"tar.xz"}"
 EXTRA_FILES="${EXTRA_FILES:-""}"
 
 if [ -z "${EXTRA_FILES+x}" ]; then
